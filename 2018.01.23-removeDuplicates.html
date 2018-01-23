@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>2018.01.23</title>
+</head>
+<button type="text" onclick="start()"> Click me</button>
+<div id="output">
+</div>
+<body>
+  <script type="text/javascript">
+    var myArr = [1,2,3,2,3,2,1,"JavaScript","hello","javascript","JavaScript"];
+    var html = document.getElementById("output");
+    html.innerHTML = myArr + "<br>";
+    function start(){
+      var newArr = remove(myArr);
+      html.innerHTML += newArr +"<br>";
+
+    }
+    function removeDuplicates(arr){
+      for(var x = 0; x < arr.length - 1; x++){
+        for(var y = (1 + x); y < arr.length; y++ ){
+          if(arr[x] == arr[y]){
+            arr.splice(y,1);
+            y--;
+          }
+        }
+      }
+
+    }
+function remove(arr){
+  var cObject ={};
+  var cArray = [];
+  for(var x = 0; x < arr.length; x++){
+    cObject[arr[x]] = "whatever";
+  }
+  for(x in cObject){
+    cArray.push(x);
+  }
+  return cArray;
+}    // use the elements in the array to create the properties of an object, and loop the properties and add them into the new array
+
+
+
+
+
+  </script>
+
+</body>
+</html>

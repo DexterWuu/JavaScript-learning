@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+</html>
+<head>
+  <title>2018.01.20</title>
+</head>
+<body>
+ <!--  First: <input type="text" id = "number1">
+  Second: <input type="text" id = "number2"> <br>
+  <button id = "btn1" onclick="myFunction2()">Calculation</button> <br>
+   -->
+  <div id="output"></div>
+  <script type="text/javascript">
+  var html = document.getElementById("output");
+
+  /**
+  var adj = ["super","careful","wonderful","bad","angry","bad"];
+  var a = "Hello"; //global variable
+  function myFunction(){
+    var b = a + " world"; //local variable
+    return b;
+  }
+  **/
+ /**
+  function calFunction(a,b,c){
+    switch(b){
+      case "add":
+      html.innerHTML = a + c;
+      break;
+      case "minus" :
+      html.innerHTML = a - c;
+      break;
+      case "multiple" :
+      html.innerHTML = a * c;
+      break;
+      case "divid" :
+      html.innerHTML = a / c;
+    }
+  } 
+  
+  function myFunction2(){
+
+    var number1 = (document.getElementById("number1").value);
+    var number2 = (document.getElementById("number2").value);
+    if(!isNaN(number1) && !isNaN(number2)){
+      var b = prompt("what is the operation? add, minus, multiple or divid")
+      calFunction(Number(number1),b,Number(number2));
+    }
+    else{
+      alert("please type in numbers");
+    }
+    
+    
+  }
+**/
+  var a = myOldFunction();
+  function myNewFunction(para = "hello world"){
+    html.innerHTML = para;
+    return para;
+  }
+  function myOldFunction(para){
+    if(typeof para === "undefined"){
+      para = "hello world";
+    }
+    html.innerHTML = para;
+    return para;
+  } //未赋值的时候，旧版本浏览器初始化parameter的方法 very important
+
+  
+
+</script>
+
+</body>
+
+
+
+
+
+
+<html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>2018.01.22</title>
+</head>
+<body>
+<div id="output">
+  
+</div>
+<script type="text/javascript">
+  var a = "world";
+  var output = document.getElementById("output");
+  (function(){
+    var a = "hello ";  
+    output.innerHTML = a;
+  })(); //匿名函数的另一种用法是self invoked functions, the benefits of it is that the function will run automatically without global variable definition. it provides the closure and avoid name conflicts.
+  output.innerHTML += a;
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <title>10/01/2018</title>
+  </head>
+  <body>
+  <script type="text/javascript">
+    /**
+    var animals = ["dog","cat","bird","fish","zebra"];
+    animals.push("sheep");// add sheep to array 
+    animals.pop(); // remove the last item 
+    animals.shift(); // remove the first item in the array
+    animals.unshift("horse"); // add the horse in the first position 
+    animals.splice(2,1);
+    animals.reverse();// reverse the order of the array
+    animals.sort();// sort the value of the order from 1-infinate a-z;
+    animals.sort().reverse();
+    animals[20] = "horse";
+    animals.fill("mouse",5,animals.length-1);
+  **/
+  var newHolder = [2,3,4,5,6,7,33,22,255,23,"cat","dog"];
+  var detectedV = 0;
+  while(detectedV == 0){
+    var inputValue = prompt("pls type in the value that you want to remove");
+    if(isNaN(inputValue)){
+      console.log("doing nothing");
+    }else{
+      alert("its a number!!!!")
+     inputValue =  Number(inputValue);
+
+    }
+
+    if (newHolder.indexOf(inputValue) >= 0) {
+      newHolder.splice(newHolder.indexOf(inputValue),1);
+      detectedV = 1;
+      alert("the item has already been removed successfully.");
+    } else {
+      alert("there is no iteam matching what you just typed in~");
+
+     }
+  }
+
+
+
+
+  </script>
+  </body>
+  </html>

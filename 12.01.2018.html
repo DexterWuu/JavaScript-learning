@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>12.01.2018</title>
+</head>
+<body>
+<script type="text/javascript">
+  var lin = {age:24, hair:"black",works:"developer"};
+  var friends ={friend1:lin,friend2:{age:30,hair:"black"}};
+  var friend2 = [lin,{age:30, hair:"black"}];
+  
+  friends.friend1.age = 25;
+  friend2[1].hair = "gold";
+  console.log(friends);
+  console.log(friend2);
+</script>
+</body>
+</html>

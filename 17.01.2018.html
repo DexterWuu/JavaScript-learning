@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>17.01.2018</title>
+</head>
+<body>
+  <output id="output">Hello world </output>
+  <script type="text/javascript">
+    // var nameArr = ["hua","jia","yan"];
+    // var name = prompt("what is your name?");
+    // // var result = nameArr.indexOf(name)>-1 ? "welcome " : "denied";
+    // //document.getElementById("output").innerText = result + name;
+    // if (nameArr.indexOf(name)>-1) {
+    //   document.getElementById("output").innerText = "Welcome " + name;
+
+    // }else{
+    //   document.getElementById("output").innerText = "denied " + name;
+    // }
+    // var time = 10;
+    // var htmlOuput = document.getElementById("output");
+    // if(time<12){
+    //   htmlOuput.innerHTML = "Good morning";
+    // }else if(time >= 12 && time <= 14){
+    //   htmlOutput.innerHTML = "Lunch time";
+    // }else if(time>14 && time <=17){
+    //   htmlOuput.innerHTML = "Good afternoon";
+    // }else if(time>17 && time <= 18 ){
+    //   htmlOuput.innerHTML = "Dinner time";
+    // }else{
+    //   htmlOuput.innerHTML = "Good evening";
+    // }
+    /**
+    var question = prompt("what are you doing?");
+    var htmlOutput = document.getElementById("output");
+    switch(question){
+      case "wake up":
+        htmlOutput.innerHTML = "It is 8 o'clock";
+        break;
+      case "have lunch":
+        htmlOutput.innerHTML = "It is 12 o'clock";
+        break;
+      case "have dinner":
+        htmlOutput.innerHTML = "It is 18 o'clock";
+        break;
+      case "sleep":
+        htmlOutput.innerHTML = "It is 20 o'clock";
+        break;
+      default:
+        htmlOutput.innerHTML = "it is not a valid action";
+    }
+    **/
+    /**
+    var question = prompt("heads or tails?");
+    // if(question == "head"){
+    //   question = 0;
+    // }else{
+    //   question = 1;
+    // } its too inefficient
+    question = question == "heads"? 0 : 1;
+    var number = Math.random() < 0.5? 0 : 1;
+    alert(number);
+    if(number == question){
+      document.getElementById("output").innerHTML = "U WIN";
+    }else{
+         document.getElementById("output").innerHTML = "U LOSE";
+    }  
+    **/
+    /**
+    var result = "Opps,something went wrong";
+    var output = document.getElementById("output");
+    var question = prompt("what do you want to ask me?");
+    var number = Math.floor(Math.random()*5);
+    switch(number){
+      case 0:
+      result = "Maybe";
+      break;
+      case 1:
+      result = "Sure";
+      break;
+      case 2: 
+      result = "Maybe not";
+      break;
+      case 3:
+      result = "You happy is OK";
+      break;
+      case 4:
+      result = "The most important is happy";
+      break;
+      default:
+      result = "I donot know about that";
+
+    }
+    output.innerHTML = "You asked me that " + question +"<br>My answer is "+ result;
+    **/
+    var player = prompt("do you choose Rock Paper or Scissors?");
+    var ps = player.charAt(0).toUpperCase();
+    var win = false;
+    var computer = Math.random();
+    if(computer <0.34){
+      computer = "Rock";
+    }else if(computer < 0.67){
+      computer = "Paper";
+    }else{
+      computer = "Scissors";
+    }
+    var cs = computer.charAt(0).toUpperCase();
+    if(ps == "R" || ps == "P" || ps =="S"){
+      if(ps == cs){
+        document.getElementById("output").innerHTML = "YOU LOSE";
+      }else if(ps + cs =="RP"){
+        document.getElementById("output").innerHTML = "YOU LOSE";
+      }else{
+        document.getElementById("output").innerHTML = "YOU WIN";
+      }
+    }
+    else{
+      document.getElementById("output").innerHTML = "You mush give a valid answer.";
+
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>2018.01.22-3-shuffle Array function</title>
+</head>
+<body>
+  <button type="text" onclick="start()">click me</button>
+  <div id="output">
+
+  </div>
+  <script type="text/javascript">
+    var html = document.getElementById("output");
+    var newArr = [6,11,45,7,52,8,1,100,23,22,0,2];
+  // for(var x = 0;x < newArr.length-1;x++){
+  //   for(var a = 0; a < newArr.length-1-x; a++){
+  //     if(newArr[a] > newArr[a+1]){
+  //       var temp = newArr[a];
+  //       newArr[a] = newArr[a+1];
+  //       newArr[a+1] = temp;
+  //     }
+  //   }
+  // } //这是冒泡排序
+  function start(){
+    shuttleArr(newArr);
+    html.innerHTML += newArr + "<br>";
+  }
+
+  function shuttleArr(arr){
+    for(var x = arr.length-1; x > 0; x--){
+      temp = arr[x];
+      var number = Math.floor(Math.random()*(x + 1));
+      arr[x] = arr[number];
+      arr[number] = temp;
+    }
+  } //shuffle array function;
+  
+</script>
+</body>
+</html>

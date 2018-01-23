@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>2018.01.18</title>
+  <style type="text/css" media="screen">
+    td{
+      border: 1px solid black;
+    } 
+  </style>
+</head>
+<body>
+ <div id="output"> </div>
+  <script type="text/javascript">
+    var output = document.getElementById("output");
+    // var html = "<table>";
+    // for(var row = 0; row < 10; row++){
+    //   html += "<tr>";
+    //   for(var ele = 0; ele < 5; ele++){
+    //     row++;
+    //     html+= "<td> cell = " + row + "</td>";
+    //   }
+    //   row--;
+    // }
+    // var total = 0;
+    // var html = "";
+    // for(var num = 0; num < 1001; num++){
+    //   if(num%5 === 0){
+    //     total += num;
+    //     html+= num + " added, and the subtotal are" + total + "<br>";
+    //    }
+    // }
+    // output.innerHTML = html;
+   // var userName = ["hua","jia","yang"];
+   //  // for(var x = userName.length-1; x >= 0; x--){
+   //  //   output.innerHTML += userName[x] + "<br>"
+   //  // }
+   //  var x = 0;
+   //  while(userName){
+   //    output.innerHTML += userName[x] + "<br>"
+   //  }
+
+   // var userName = document;
+   var stopPoint = "Y";
+   var shoppingList = [];
+   var addItem = "";
+   while(stopPoint == "Y"){
+    addItem = prompt("what you wannt to add");
+    if(addItem == "no"){
+      break;
+    }
+    shoppingList.push(addItem);
+    stopPoint = prompt("do you still want to add? Y/N");
+    stopPoint = stopPoint.toUpperCase();
+    
+   }
+
+for(item of shoppingList){
+  output.innerHTML += item + "<br>";
+}
+  </script>
+
+</body>
+</html>

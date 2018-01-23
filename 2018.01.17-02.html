@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>2018.01.17-02</title>
+</head>
+<body>
+  <div id="output"></div>
+  <script type="text/javascript">
+    var a = document.getElementById("output");
+    /**
+    var number = prompt("How many times that you want the loop ");
+    if(!isNaN(number)){
+      var x = 0;
+      var times = 0;
+      do{
+        x++;
+        times++;
+        output.innerHTML += "x = " + x + "<br>";
+      }
+      while (x < Number(number));
+      output.innerHTML += "The value of x is " + x + "<br>";
+    }
+    else{
+      output.innerHTML = "pls give a valid number.";
+    }
+    **/
+    /**
+    var x = 1;
+    var number = prompt("How many times do you want the loop run?");
+    if(!isNaN(number)){
+      while(x < Number(number) + 1){
+        output.innerHTML += "Value of x = " + x + "<br>";
+        x++;
+      }
+      output.innerHTML += "Value of x =" + x +"<br>"
+    }
+    else{
+      output.innerHTML = "Please give a valid number.";
+    }
+    **/
+    /**
+    var password = "123";
+    var guessPasswd = prompt("please give me a guess for the password");
+    while(password != guessPasswd){
+      guessPasswd = prompt("Opps, its incorrect, please guess again~");
+     
+    }
+    output.innerHTML = "yes~ its correct!"
+    **/
+    // for loops
+    // for(var x = 0; x <= 31; x++){
+    //   if((x%2)){
+    //     output.innerHTML += "Value for x = " + x + "<br>";
+    //   }
+      
+    // }
+    var banana = prompt("how many bananas you wannt to eat?");
+    var calorisPerBanana = 100;
+    var totalCarloris = 0;
+    if(!isNaN(banana)){
+      for (var i = 1; i <= banana; i++) {
+          totalCarloris += calorisPerBanana;
+        }
+    }
+output.innerHTML = "final carloris for you are " + totalCarloris + "<br>";
+  </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>2018.01.20-3</title>
+</head>
+<body>
+<div id ="output"></div>
+</body>
+<script type="text/javascript">
+  var a = function(x){
+     var y = x++; 
+    return function(){
+      alert(x++);
+      alert(y++);
+    }(5);
+  }
+// anonymous function
+</script>
+</html>

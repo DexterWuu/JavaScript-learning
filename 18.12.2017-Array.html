@@ -1,0 +1,29 @@
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <script type="text/javascript"> 
+    // var arr = [1,2,3,4,5,6];
+    // var arr1 = new Array();
+    // var arr2 = new Array(1,"hello",false);
+    // var arr3 = [];
+    // console.log(arr);
+    // console.log(arr1);
+    // console.log(arr2);
+    // console.log(arr3);
+    var taskArr = ["learning JS", "learning CSS","learning HTML","learning PS"];
+    taskArr[taskArr.length] = "watching TV";
+    var progressArr = ["done", "In progress","to do"];
+    var question1 = prompt("which task you want to go 1-" + taskArr.length +"?");
+
+    var question2 = prompt("status 1 = done 2 = In progress 3 = to do?");
+    if(!isNaN(question1) && !isNaN(question2) && question1>0 && question1<5 && question2>0 && question2 < 5){
+    console.log("today you will " + taskArr[parseInt(question1 - 1)] + " status of task " + progressArr[parseInt(question2 - 1)]);  
+    }
+    else{
+      alert("please give the number 1 - 4 only");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>2018.01.22-2</title>
+</head>
+<body>
+  <button type="text" onclick="guess()"> Click Me</button> <br>
+  <div id="output">
+
+  </div>
+<script type="text/javascript">
+  var html = document.getElementById('output');
+  var answerArr = ["javascript","hardworking","insist"];
+  function guess(){
+    compare(prompt("please type in the guess word"));
+  }
+  function compare(para){
+    var number = Math.floor(Math.random()*answerArr.length);
+    if(para == answerArr[number]){output.innerHTML = "Your answer is correct";}
+    else {
+      compare(prompt("please try again"));
+    }
+  }
+
+
+
+</script>
+</body>
+</html>

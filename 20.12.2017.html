@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <script type="text/javascript">
+  // var animals = ["dog","cat","rabbit","fish"];
+  // // var a = parseInt(Math.random()*10);
+  // var a = Math.floor(Math.random()*animals.length);
+  // console.log(animals[a]);
+  
+  // var index1 = 0;
+  
+  // while(index1 == 0){
+  //   var message = prompt("what is the number for " + animals[a]);
+  //   if(a == message){
+   
+  //     alert("Congraduations, you are right~")
+  //     index1 = 1;
+  //   }
+  //   else{
+  //     alert("Sorry, pls try again");
+  //   }
+  // }
+
+  var arr = ["dog","cat","rabbit","fish"];
+  var random1 = arr[ Math.floor(Math.random()*arr.length)];
+  var message = prompt("please guess the number for " + random1);
+  var response = (random1 == arr[message]) ? "Correct" : "Wrong, please try again";
+  alert(response);
+</script>
+</body>
+</html>

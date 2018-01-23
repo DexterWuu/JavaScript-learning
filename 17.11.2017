@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>helloWorld</title>
+</head>
+<body>
+<script type="text/javascript">
+  var myName = prompt('What is you name?');
+  alert("Welcome to my website, " + myName + "!" );
+
+  
+
+
+
+
+
+</script>
+</body>
+</html>
