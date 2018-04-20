@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>2018.01.31-recall</title>
+</head>
+<body onload="myFunction('body')">
+<input type="button" onclick="go(this)" value="click">
+<input type="button" onclick="go1()" value="click" id="click">
+<input type="button" onclick="go1()" value="click">
+<div id="output"></div>
+</body>
+<script type="text/javascript">
+  document.getElementById('click').addEventListener('load',myFunction('yes'))
+  function go(t){
+    t.value = "clicked"
+  }
+  document.getElementById('click').onclick = function(){
+    this.value = "clicked";
+  }
+  function myFunction(t){
+   document.getElementById('output').innerHTML = "ALL LOADED " + t ;
+  }
+  // myFunction
+  
+</script>
+</html>

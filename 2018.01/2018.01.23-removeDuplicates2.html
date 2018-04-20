@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>2018.01.23-removeDuplicates</title>
+</head>
+<body>
+  <button type="text" onclick="remove()">Click Me</button>
+  <div id="output"></div>
+<script type="text/javascript">
+  var newArr = ["22","32","1","hello","3","55","26","78","22","32","1","3","55","26","78","g"];
+  var html = document.getElementById('output');
+  function remove(){
+   var myArr = removeDuplicates(newArr);
+    html.innerHTML = newArr + "<br>" + myArr; 
+  }
+  function removeDuplicates(arr){
+    var holder =[];
+    var object = {};
+    for(var a = 0; a < arr.length; a++){
+      object[arr[a]] ="whatever";
+    }
+    for(var x in object){
+      holder.push(x);
+    }
+    return holder;
+  }
+  
+
+</script>
+</body>
+</html>

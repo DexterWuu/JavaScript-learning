@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>2018.01.27-Windows Browser Objects</title>
+</head>
+<body>
+  <div id="wrapper"></div>
+  <script type="text/javascript">
+    var html = document.getElementById("wrapper");
+  //console.dir(window);
+  // for(var prop in window){
+  //   document.write(prop + "" + window[prop] + "<br>")
+  // }
+  html.innerHTML += window.innerHeight + " " + window.innerWidth;
+  
+  window.onbeforeunload = function(event) {
+    event.returnValue = "Write something clever here..";
+  }; 
+  window.open('2018.01.27-recall the card game.html');
+</script>
+</body>
+</html>

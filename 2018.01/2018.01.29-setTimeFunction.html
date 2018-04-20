@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>2018.01.29-setTimeFunction</title>
+</head>
+<body>
+  <div id="wrapper"></div>
+  <a href="index1.html">index1</a>
+  <a href="index2.html">index2</a>
+  <a href="index3.html">index3</a>
+  <button type="text" onclick="startInt()">startInt</button>
+  <button type="text" onclick="claerInt()">clearInterval</button>
+  <script type="text/javascript">
+    var output = document.getElementById('wrapper');
+    var myTimer;
+    setTimeout(updateWrapper,5000);// 甚至不需要定义一个variable去调用这个函数
+    function startInt(){
+      myTimer = window.setTimeout(myPopup,1000);
+    }
+    // function startInt(){
+    //   myPopup();
+    //   myTimer = window.setTimeout(startInt,1000);
+    // }
+    function claerInt(){
+      window.clearInterval(myTimer); //释放定义的间隔
+     // alert(myTimer);
+    }
+    function myPopup(){
+      alert("hello");
+    }
+    function updateWrapper(){
+      output.innerHTML = "Welcome to my website :)";
+    }
+  </script>
+
+</body>
+</html>

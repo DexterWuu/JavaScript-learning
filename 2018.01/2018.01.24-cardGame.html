@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>2018.01.24-cardGame</title>
+</head>
+<body>
+<div id="wrapper">
+  <div id="stat"></div> How many players ?
+  <input type="number" id="players" min="1" max="5" value="3">
+  <button type="text" onclick="startDeal()" > Deal</button>
+  <div id="message"></div>
+</div>
+<script type="text/javascript"> 
+  var suits = ["♠","♥","♦","♣"];
+  var cardFace = ["2","3","4","5","6","7","8","9","10","J","Q","K","A"];
+  var cards = [];
+  var players = [];
+// create the deck;
+  function startDeal(){
+    players = [];
+    cards = [];
+    var num = Number(document.getElementById('players').value);
+    for(var a = 1; a <= num; a++){
+      var newArr = [];
+      players.push(newArr);
+    }
+    // add the player into the player arr based on the number of players
+    buildCards();
+    shuffleCards();
+   
+    deal();
+    console.log(players);
+  }
+  // create the deck
+  function buildCards(){ 
+    for(var x = 0; x < cardFace.length; x++){
+      for(var y = 0; y < suits.length; y++){
+        var cardsInfo = cardFace[x] + suits[y];
+        cards.push(cardsInfo);
+      }
+    }
+  }
+// shuffle the deck;
+  function shuffleCards(){
+    for(var a = 0; a < cards.length; a++){
+       var temp  = cards[a];
+      var number = Math.floor(Math.random()*cards.length);
+      cards[a] = cards[number];
+      cards[number] = temp;
+    }
+    
+  }
+
+//give every players the cards;
+  function deal(){ 
+    var num = Number(document.getElementById('players').value);
+    var html = document.getElementById('message');
+
+    var p = 0;
+    for(var a = 0; a < cards.length; a++){
+         players[p].push(cards[a]);
+         p++;
+         if(p == num){
+          p = 0;
+         }
+         }
+    for(var a = 0; a < players.length; a++){
+      for(var b = 0; b < players[a].length; b++){
+        if(b==0){
+          html.innerHTML += "Player" + (a+1) +"<br>"
+        }
+        html.innerHTML += players[a][b] + ", ";
+        if(b == players[a].length-1){
+          html.innerHTML += "<br>"
+        }
+      }
+    }
+
+     }
+    
+  
+
+
+</script>
+</body>
+</html>

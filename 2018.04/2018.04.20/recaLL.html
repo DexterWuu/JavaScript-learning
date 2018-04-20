@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>review</title>
+</head>
+<body>
+<script type="text/javascript">
+// var a = prompt("what do you think about your life?");
+// alert(a);
+// var animalArr = ["dog","cat","bird","pig"];
+// var guessAni = Math.floor(Math.random()*animalArr.length);
+// var answer = Number(prompt("please guess the number for " + animalArr[guessAni]));
+// answer = guessAni? prompt("you are right") : prompt("sorry");
+
+// var c = 0;
+// while(c == 0){
+//   var a = Number(prompt("what is the number A you want?")) ;
+//   var b = Number(prompt("what is the number B you want?"));
+//   if(!isNaN(a) && !isNaN(b)){
+//   var result = (a===b)? "right" : "wrong";
+//   alert(result);
+  
+//   if(result == "right") {c = 1};
+// }
+// else{
+//   alert("please give a number!")
+// }}
+var arr = ["3","4","1","10","9","7","6","cat","dog","shit"];
+arr.sort();
+var index1 = 0;
+console.log(arr);
+var result = prompt("please give the value that you want to remove");
+if(isNaN(result)){
+  console.log("doing nothing");
+}
+else{
+  Number(result);
+}
+  while(index1 == 0){
+    if(arr.indexOf(result) >=0){
+      arr.splice(arr.indexOf(result),1);
+      alert("it has been removed");
+      index1 = 1;
+    }
+    else{
+      alert("please give a valid result");
+    }
+  }
+</script>
+</body>
+</html>

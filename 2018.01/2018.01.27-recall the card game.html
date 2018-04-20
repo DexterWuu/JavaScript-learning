@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>2018.01.27-recall the deal function</title>
+</head>
+<body>
+Number of Players: <input type="number" max="5" min="1" value="3" id="players">
+<button type="text" id="deal" onclick="deal()">Deal</button> <br>
+<div id="output">
+<script type="text/javascript">
+  //declare the global variables
+ // var players = [];
+  //var deck = [];
+  
+  //create the players function
+  function createPlayer(){
+    var players = [];
+    var numberOfPlayers = document.getElementById("players").value;
+    for(var number =0; number < numberOfPlayers; number++){
+      var player = []; // create the player 
+      players.push(player); // add the player into the players array
+    }
+    return players;
+  }
+  //create the cards funtion
+  function createDeck(){
+    var deck = [];
+    var card = [];
+    var paiMian = ["♠","♥","♦","♣"];
+    var number  = ["1","2","3","4","5","6","7","8","9","10","J","Q","K","A"];
+    for(var number1 =0; number1 < number.length; number1++){
+      for(number2 = 0; number2 < paiMian.length; number2++){
+       if(number2 == 0 || number2 == 1){
+          card = [];
+          card.push(number[number1]);
+          card.push(paiMian[number2]);
+          card.push("red");
+       } 
+       else{
+          card = [];
+          card.push(number[number1]);
+          card.push(paiMian[number2]);
+          card.push("black");
+
+       }
+
+     //   var card = number[number1] + paiMian[number2];
+
+
+        deck.push(card);
+      }
+    }
+    return deck;
+  }
+  //shuffle the deck function
+  function shuffle(arr){
+    //var numberOfPlayers = document.getElementById("players").value;
+    for(var number = 0; number < arr.length; number++){
+      var random = Math.floor(Math.random()*arr.length);
+      var holder = arr[number];
+      arr[number] = arr[random];
+      arr[random] = holder;
+    }
+  }
+  // deal the cards to players
+  function dealcards(arr,players){
+
+    var html = document.getElementById("output");
+    var numberOfPlayers = document.getElementById("players").value;
+    var record = 0;
+    for(var number = 0; number < arr.length; number++){  
+      players[record].push(arr[number]);
+      record++;
+     // alert(numberOfPlayers);
+      if(record == numberOfPlayers){ record = 0;}
+    }
+    // already deal all the cards to all players, now it's the time to show on the screen\
+    for(var number = 0; number < numberOfPlayers; number++){
+      html.innerHTML += "Player " + (number + 1) + ":" +"<br>";
+      for(var b = 0; b < players[number].length; b++){
+        var card = players[number][b][0] + players[number][b][1];
+        if(players[number][b][2] == "red"){
+         // alert(players[number][b][2]);
+          html.innerHTML += "<font color=red>" + card + "</font>" + " ,";
+        }
+        else{
+          html.innerHTML += card + " ,";
+        }
+        
+      } 
+      html.innerHTML += "<br><br>";
+    }
+  }
+
+  function deal(){
+   // deck = [];
+    //players = [];
+    
+    var players = createPlayer();
+    var deck = createDeck();
+    shuffle(deck);
+    dealcards(deck,players);
+
+  }
+ 
+
+
+
+
+</script>
+  
+</div>
+</body>
+</html>

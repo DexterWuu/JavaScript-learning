@@ -1,0 +1,47 @@
+<html> <head>
+  <title></title>
+</head>
+<body>
+  First:  <input type="text" id="number1">
+  Second: <input type="text" id="number2">
+  <br>
+  <input type="button" onclick="addBy()" value="Add">
+  <input type="button" onclick="subBy()" value="Subtract">
+  <input type="button" onclick="mulBy()" value="Multiple">
+  <input type="button" onclick="divBy()" value="Divide">
+  <div id="output"> </div>
+ <script type="text/javascript">
+  var html =  document.getElementById('output');
+  var number1 = document.getElementById('number1');
+  var number2 = document.getElementById('number2');
+  function outC(a,b,c,callback){
+    var result = callback(Number(a),Number(b));
+    return html.innerHTML += a + " " + c + " " + b + " = " + result + "<br>";
+  }
+  function addBy(){
+    outC(number1.value,number2.value,"+",function(a,b){
+      return a + b;
+    })
+  }
+  function subBy(){
+    outC(number1.value, number2.value,"-", function(a,b){
+      return a-b;
+    })
+  }
+function mulBy(){
+    outC(number1.value, number2.value,"*", function(a,b){
+      return a*b;
+    })
+  }
+  function divBy(){
+    outC(number1.value, number2.value,"/", function(a,b){
+      return a/b;
+    })
+  }
+
+
+
+
+ </script>
+</body>
+</html>

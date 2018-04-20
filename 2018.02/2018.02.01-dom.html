@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>2018.02.01-dom</title>
+</head>
+<body>
+  <div id="output">Page1</div>
+  <form name="myForm">
+  <input type="text" name="url" id="url" name="url" value="http://www.google.com.au">
+  <input type="button" onclick="goUrl()" value="G0 to a URL">
+  <input type="button" onclick="goUrl2()" value="show the magic">
+ 
+   </form>
+<script type="text/javascript">
+  function goUrl(){
+    var location = document.getElementById('url').value;
+    window.location = location;
+  }
+  function goUrl2(){
+    document.getElementById('output').innerHTML = document.myForm.url.value;
+  }
+  // we can use document.myForm.children[2] to find the button and update it
+</script>
+</body>
+</html>

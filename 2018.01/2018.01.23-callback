@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Callback Function</title>
+</head>
+<body>
+<div id="output"></div>
+<script type="text/javascript">
+  function twoParameter(a,b,callback){
+    var result = callback(a,b);
+    var html = document.getElementById("output");
+    html.innerHTML += result + "<br>";
+
+  }
+  twoParameter("Hello", " world", function(a,b){
+    var result = a + b + " is combined";
+    return result;
+  })
+
+
+</script>
+</body>
+</html>

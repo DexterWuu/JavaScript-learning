@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Function in Function</title>
+</head>
+<body>
+<script type="text/javascript">
+  function a(){
+    var n = 10000;
+    function b(){
+      n++;
+      return n;
+    }
+    b();
+    var ab = function(){
+      n++; 
+      return n;
+    }
+    ab();
+    console.log(n);
+  }
+  a();
+</script>
+</body>
+</html>

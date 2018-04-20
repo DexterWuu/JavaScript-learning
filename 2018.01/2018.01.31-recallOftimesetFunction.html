@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>2018.01.31-recallOfTimesetFunction</title>
+</head>
+<body>
+<button type="text" id="btn1" onclick="deal()">Click Me</button>
+<button type="text" id="btn2" onclick="release()">Release Me</button>
+<div id="output"></div>
+<script type="text/javascript">
+  var myTimer;
+  setTimeout(updateMessage,2000);
+  function updateMessage(){
+    document.getElementById('output').innerHTML = "Welcome to my web";
+  }
+function deal(){
+  myTimer = setTimeout(show,1000);
+  function show(){
+    alert("Hello World");
+  }
+}
+function release(){
+  window.clearInterval(myTimer);
+}
+
+
+</script>
+</body>
+</html>

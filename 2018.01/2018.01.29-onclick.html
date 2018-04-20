@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>2018.01.29-onclick</title>
+</head>
+<body>
+ <div id="wrapper"></div>
+  <!-- <a href="index1.html">test.html</a>
+  <a href="index2.html">test2.html</a>
+  <a href="index3.html">test3.html</a> -->
+  <button type="text" onclick="prompt('hello world')">Back</button>
+  <button type="text" onclick="alert('hello world')">Back</button>
+  <button type="text" onclick="print()">print</button>
+  <button type="text" onclick="javascript:window.location.href = 'http://www.google.com.au'">Go to Google</button>
+  <button type="text" onclick="window.location.href='http://www.google.com.au'"> Go to Google</button>
+  <button type="text" onclick="location = 'http://www.google.com.au'" > Go to Google</button>
+  <script type="text/javascript">
+    var output = document.getElementById('wrapper');
+
+    function goBack(){
+      window.history.go(-1);
+    }
+  </script>
+</body>
+</html>

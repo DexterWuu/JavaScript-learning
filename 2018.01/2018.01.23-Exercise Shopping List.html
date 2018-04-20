@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exercise Shopping List</title>
+</head>
+<body>
+<input type="text" id="item">
+<br>
+<input type="button" onclick="addItem()" value="Add Item">
+<br>
+<div id="output"></div>
+<script type="text/javascript">  
+  var shoppingList = [];
+  var x = 0;
+  function addItem(){
+    var itemAdd = document.getElementById("item");
+    shoppingList.push(itemAdd.value);
+    x++;
+    function loopItems(){
+      var html = document.getElementById('output');
+      html.innerHTML += x + "." + item.value +"<br>";
+      }
+      loopItems();
+    }
+</script>
+</body>
+</html>

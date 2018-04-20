@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>2018.02.01-thisDOM</title>
+</head>
+<body>
+<input type="button" name="click1" onclick="myFun(this)" value="click1">
+<input type="button" name="click2" onclick="myFun(this)" value="click2">
+<input type="button" name="click3" onclick="myFun(this)" value="click3">
+<!--now we can also only give the id and use event handler code -->
+<input type="button"  id="click1" value="click1">
+<input type="button"  id="click2" value="click2">
+<input type="button"  id="click3" value="click3">
+<script type="text/javascript">
+  document.getElementById('click1').onclick = mySecondFun;
+  document.getElementById('click2').onclick = mySecondFun;
+  document.getElementById('click3').onclick = mySecondFun;
+  function mySecondFun(){
+    this.value = "clicked";
+  }
+
+
+
+  function myFun(t){
+    t.value = "clicked";
+  }
+</script>
+
+</body>
+</html>

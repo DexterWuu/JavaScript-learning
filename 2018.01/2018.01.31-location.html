@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>2018.01.31-location</title>
+</head>
+<body>
+  <div id="output">Page1</div>
+  <form name="myForm">
+  <input type="text" name="url" id="url" name="url" value="http://www.google.com.au">
+  
+ 
+   </form>
+   <button type="text" onclick="goUrl()" >G0 to a URL</button> 
+  <button type="text" onclick="goUrl2()" >show the magic</button>
+<script type="text/javascript">
+  function goUrl(){
+    var location = document.getElementById('url').value;
+    window.location = location;
+  }
+  function goUrl2(){
+    document.getElementById('output').innerHTML = document.myForm.url.value;
+  }
+</script>
+</body>
+</html>
